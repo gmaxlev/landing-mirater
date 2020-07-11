@@ -1,0 +1,38 @@
+include templates/mixins.pug
+
+<!doctype html>
+html(lang="ru")
+
+    head
+
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        
+        title Title
+
+        link(rel="stylesheet", href="css/main.css")
+        
+        script(src="vendor/jquery.min.js")
+
+        // =====================
+        // ЗАГРУЗКА SVG СПРАЙТОВ
+        // =====================
+        script.
+            $(document).ready(function() {
+                var req = new XMLHttpRequest();
+                req.onload = function (e) {
+                    var svg = document.implementation.createHTMLDocument( '' );
+                    svg.body.innerHTML = e.target.response.replace('<svg ', '<svg style="display: none"');
+                    document.body.appendChild(svg.body.firstElementChild);
+                    svg = null;
+                };
+                req.open('GET', './img/sprite.defs.svg', true);
+                req.responseType = 'text';
+                req.send();
+            });
+        // =========================
+        // END ЗАГРУЗКА SVG СПРАЙТОВ
+        // =========================
+            
+    body

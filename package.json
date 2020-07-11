@@ -1,0 +1,30 @@
+{
+  "name": "mirater-landing",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000e\u0000x\u0000m\u0000o\u0000-\u0000l\u0000a\u0000n\u0000d\u0000i\u0000n\u0000g\u0000\r\u0000 \u0000",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "https://freelancehunt.com/freelancer/maxlev.html",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-beautify": "^3.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-fontmin": "^0.7.4",
+    "gulp-google-webfonts": "^4.0.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-terser": "^1.2.0",
+    "gulp.spritesmith": "^6.11.0",
+    "imagemin-jpeg-recompress": "^7.0.0",
+    "imagemin-pngquant": "^9.0.0"
+  }
+}
