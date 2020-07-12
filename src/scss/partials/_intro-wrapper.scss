@@ -1,0 +1,21 @@
+.intro-wrapper {
+  padding-bottom: 144px;
+  position: relative;
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 0;
+  }
+}
+.intro-wrapper__arrow {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  @include media-breakpoint-down(sm) {
+    bottom: 40px;
+    left: 17px;
+  }
+  @include media-breakpoint-down(xs) {
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

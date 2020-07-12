@@ -1,0 +1,48 @@
+.nums {
+  display: flex;
+  color: #fff;
+  padding: 0px 31px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+    margin-bottom: -25px;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 0;
+  }
+}
+.nums__item {
+  text-align: center;
+  width: 18%;
+  min-width: 183px;
+  @include media-breakpoint-down(sm) {
+    width: 50%;
+    margin-bottom: 25px;
+  }
+  @include media-breakpoint-down(xs) {
+    width: 100%;
+  }
+}
+.nums__param {
+  color: $color-3;
+  font-weight: 800;
+  font-size: 1.75rem;
+  line-height: 3.25rem;
+  text-transform: uppercase;
+}
+.nums__about {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+.nums__separator {
+  background-color: $color-2;
+  width: 20px;
+  height: 1px;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}

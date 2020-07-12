@@ -1,0 +1,32 @@
+.header {
+  height: 105px;
+  @include media-breakpoint-down(xs) {
+    height: 60px;
+  }
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
+  @include media-breakpoint-down(xs) {
+  }
+}
+
+.header__logo {
+  img {
+    max-width: 100%;
+  }
+}
+
+.header__contacts {
+  @include media-breakpoint-down(xs) {
+    margin-top: 10px;
+    padding-left: 20px;
+    box-sizing: border-box;
+  }
+}

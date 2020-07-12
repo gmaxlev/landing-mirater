@@ -1,0 +1,27 @@
+.purchase {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 70px;
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+}
+
+.purchase__item {
+  width: 25%;
+  margin-right: 30px;
+  @include media-breakpoint-down(sm) {
+    width: 50%;
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  img {
+    max-width: 100%;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,60 @@
+.map {
+  // margin-bottom: 50px;
+}
+.map__container {
+  padding: 60px 100px 251px;
+  position: relative;
+  @include media-breakpoint-down(md) {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+  }
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 25px 10px;
+  }
+  &::before {
+    content: "";
+    background-color: $color-4;
+    width: 236px;
+    position: absolute;
+    top: -70px;
+    bottom: -70px;
+    left: -70px;
+    z-index: 1;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: 2px solid transparentize($color-2, 0.6);
+    z-index: 5;
+  }
+}
+.map__comment {
+  color: $color-2;
+  margin-top: 17px;
+}
+.map__content {
+  position: relative;
+  z-index: 10;
+}
+.map__image {
+  text-align: center;
+  margin-top: -200px;
+  position: relative;
+  z-index: 10;
+  padding: 0 2px;
+  @include media-breakpoint-down(xs) {
+    margin-top: -2px;
+  }
+  img {
+    max-width: 100%;
+    box-shadow: 0 12px 30px rgba(166, 166, 166, 0.38);
+  }
+}

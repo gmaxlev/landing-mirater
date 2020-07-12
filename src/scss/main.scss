@@ -20,3 +20,32 @@
 @import "./global";
 
 // Блоки (БЭМ)
+@import "./partials/wrapper";
+@import "./partials/container";
+@import "./partials/header";
+@import "./partials/header-contact";
+@import "./partials/intro";
+@import "./partials/accent";
+@import "./partials/button";
+@import "./partials/intro-wrapper";
+@import "./partials/section-header";
+@import "./partials/section-gallery";
+@import "./partials/gallery";
+@import "./partials/gallery-nav";
+@import "./partials/promo";
+@import "./partials/detailes";
+@import "./partials/prop";
+@import "./partials/map";
+@import "./partials/aboutus";
+@import "./partials/nums";
+@import "./partials/purchase";
+@import "./partials/footer";
+@import "./partials/foot-content";
+@import "./partials/footmap";
+@import "./partials/modal";
+@import "./partials/modal-window";
+@import "./partials/modal-form";
+@import "./partials/input-text";
+@import "./partials/form-send-error";
+@import "./partials/form-send-success";
+@import "./partials/input-error";

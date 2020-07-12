@@ -12,8 +12,14 @@ html(lang="ru")
         title Title
 
         link(rel="stylesheet", href="css/main.css")
+        link(rel="stylesheet", href="vendor/fancybox/jquery.fancybox.min.css")
+        link(rel="stylesheet", href="vendor/animate.min.css")
         
         script(src="vendor/jquery.min.js")
+        script(src="vendor/fancybox/jquery.fancybox.min.js")
+        script(src="vendor/jquery.validate.min.js")
+        script(src="vendor/jquery.mask.min.js")
+        script(src="vendor/wow.min.js")
 
         // =====================
         // ЗАГРУЗКА SVG СПРАЙТОВ
@@ -36,3 +42,316 @@ html(lang="ru")
         // =========================
             
     body
+
+        .wrapper
+
+            // =================
+            // МОДАЛЬНАЯ ФОРМА 1
+            // =================
+            .modal#modal-1
+                .modal__window
+                    .modal__content
+                        .modal-window
+                            .modal-form
+                                .modal-form__header Заполните форму
+                                .modal-form__subheader Мы свяжемся с Вами в ближайшее время
+                                form.modal-form__form.form-modal-1(name="Форма №1")
+                                    .modal-form__input
+                                        .input-text
+                                            input(type="text", name="name", placeholder="Ваше имя")
+                                    .modal-form__input
+                                        .input-text
+                                            input(type="text", name="phone", placeholder="Ваш номер телефона").phone-mask
+                                    .modal-form__input
+                                        .input-text
+                                            input(type="text", name="email", placeholder="Ваш e-mail")
+                                    .modal-form__act
+                                        button.button.button_a Зарегистрироваться
+                                                
+                                .form-send-error Ошибка. Не удалось отправить форму.
+                                .form-send-success Спасибо!<br> Ожидайте звонок.
+                        .modal-window__close
+                            +svg-sprite('svgsprite_close', 'svg-sprite')
+            // =====================
+            // END МОДАЛЬНАЯ ФОРМА 2
+            // =====================
+
+            // ======
+            // HEADER
+            // ======
+            header.header.wow.fadeInDown
+                .container.header__content
+                        .header__logo
+                            img(src="img/logo.png", alt="")
+                        .header__contacts
+                            .header-contact
+                                a(href="").header-contact__number 0 800 331 479
+                                .header-contact__comment
+                                    span Всі дзвінки безкоштовні
+                                    span (безкоштовно)
+            // ==========
+            // END HEADER
+            // ==========
+
+            // ===========
+            // ПРИВЕТСТВИЕ
+            // ===========
+            .container
+                .intro-wrapper
+                    .intro-wrapper__arrow
+                        img(src="img/down-arrow.png", alt="")
+                    section.intro
+                        .intro__intr1
+                            img(src="img/interior-1.png", alt="")
+                        .intro__intr2
+                        .intro__intr3
+                        .intro__intr4
+                            img(src="img/pedestal.png", alt="")
+                        .intro__intr5
+                        .intro__content
+                            .intro__comment.wow.fadeInUp(data-wow-delay="0.4s") MIRATER
+                            h1
+                                span.wow.fadeInUp(data-wow-delay="0.5s") Меблі для ванної кімнати
+                                span.wow.fadeInUp(data-wow-delay="0.6s") можуть служити роками.
+                                span.accent.wow.fadeInUp(data-wow-delay="0.7s") Доведено!
+                            .intro__act
+                                button.button.button_a.wow.fadeInUp(data-wow-delay="0.8s" data-modal="modal-1") Дивитись каталог
+            // ===============
+            // END ПРИВЕТСТВИЕ
+            // ===============
+
+            // =======
+            // ГАЛЕРЕЯ
+            // =======
+            section.section-gallery
+                .container
+                    .section-gallery__header
+                        .section-header.wow.fadeInUp Коли ванна - <span>перлина оселі</span>
+                    .section-gallery__content
+                        .gallery.wow.fadeInUp
+                            .gallery__slide.gallery__slide_show
+                                a(href="img/interior-3.png" data-fancybox="gallery" style="background-image: url(img/interior-3.png)").gallery__item.gallery__item_sq
+                                a(href="img/interior-4.png" data-fancybox="gallery" style="background-image: url(img/interior-4.png)").gallery__item.gallery__item_rect
+                                .gallery__item.gallery__item_sev
+                                    a(href="img/interior-5.png"  data-fancybox="gallery" style="background-image: url(img/interior-5.png)").gallery__mini
+                                    a(href="img/interior-6.png"  data-fancybox="gallery" style="background-image: url(img/interior-6.png)").gallery__mini
+                            .gallery__slide
+                                a(href="img/interior-3.png" data-fancybox="gallery" style="background-image: url(img/interior-3.png)").gallery__item.gallery__item_sq
+                                a(href="img/interior-4.png" data-fancybox="gallery" style="background-image: url(img/interior-4.png)").gallery__item.gallery__item_rect
+                                .gallery__item.gallery__item_sev
+                                    a(href="img/interior-5.png"  data-fancybox="gallery" style="background-image: url(img/interior-5.png)").gallery__mini
+                                    a(href="img/interior-6.png"  data-fancybox="gallery" style="background-image: url(img/interior-6.png)").gallery__mini
+                            .gallery__slide
+                                a(href="img/interior-3.png" data-fancybox="gallery" style="background-image: url(img/interior-3.png)").gallery__item.gallery__item_sq
+                                a(href="img/interior-4.png" data-fancybox="gallery" style="background-image: url(img/interior-4.png)").gallery__item.gallery__item_rect
+                                .gallery__item.gallery__item_sev
+                                    a(href="img/interior-5.png"  data-fancybox="gallery" style="background-image: url(img/interior-5.png)").gallery__mini
+                                    a(href="img/interior-6.png"  data-fancybox="gallery" style="background-image: url(img/interior-6.png)").gallery__mini
+                            .gallery__slide
+                                a(href="img/interior-3.png" data-fancybox="gallery" style="background-image: url(img/interior-3.png)").gallery__item.gallery__item_sq
+                                a(href="img/interior-4.png" data-fancybox="gallery" style="background-image: url(img/interior-4.png)").gallery__item.gallery__item_rect
+                                .gallery__item.gallery__item_sev
+                                    a(href="img/interior-5.png"  data-fancybox="gallery" style="background-image: url(img/interior-5.png)").gallery__mini
+                                    a(href="img/interior-6.png"  data-fancybox="gallery" style="background-image: url(img/interior-6.png)").gallery__mini
+                    .section-gallery__nav.gallery-nav
+                        .gallery-nav__num
+                            span#gallery-active-number
+                            span#gallery-total-number
+                        .gallery-nav__buttons
+                            button#gallery-prev
+                                +svg-sprite('svgsprite_back', 'svg-sprite')
+                            button#gallery-next
+                                +svg-sprite('svgsprite_back', 'svg-sprite')
+            // ===========
+            // END ГАЛЕРЕЯ
+            // ===========
+
+            // ===============================
+            // ОТРИМАЙТЕ ПОВНИЙ КАТАЛОГ МЕБЛІВ
+            // ===============================
+            .container
+                .promo
+                    .promo__book.wow.flipInX(data-wow-delay="0.5s")
+                        img(src="img/book.png", alt="")
+                    .promo__container
+                        .promo__content
+                            .promo__content
+                                .section-header.wow.fadeInUp Отримайте <br>повний каталог меблів <span>з цінами</span>
+                                .promo__comment.wow.fadeInUp(data-wow-delay="0.1s") Співвідношення ціна/якість - це про MIRATER
+                                .promo__act.wow.fadeInUp(data-wow-delay="0.2s")
+                                    button.button.button_a(data-modal="modal-1") Отримайте каталог
+            // ===================================
+            // END ОТРИМАЙТЕ ПОВНИЙ КАТАЛОГ МЕБЛІВ
+            // ===================================
+
+            // ======================
+            // ДОСКОНАЛІСТЬ В ДЕТАЛЯХ
+            // ======================
+            .container
+                .section-header.wow.fadeInUp Досконалість в деталях. <span>Підтверджуємо</span>
+                .detailes
+                    .detailes__props.detailes__props_right
+                        .detailes__prop.wow.fadeInLeft(data-wow-delay="0.1s")
+                            .prop
+                                .prop__icon
+                                    +svg-sprite('svgsprite_shines', 'svg-sprite')
+                                .prop__name Білосніжний виглядає так
+                                .prop__comment Всі вироби фарбуються фарбою «VERNILEGNO» (Італія). Вона не має відтінку «жовтизни» та зберігає білосніжність на роки. Сама фарба еластична, що запобігає появі тріщин в покритті.
+                        .detailes__prop.wow.fadeInLeft(data-wow-delay="0.2s")
+                            .prop
+                                .prop__icon
+                                    +svg-sprite('svgsprite_brush', 'svg-sprite')
+                                .prop__name Ідеальна поверхня
+                                .prop__comment Фасад та боковини перед ґрунтуванням проходять процес «чорнового шліфування». На цьому етапі усуваються дрібні нерівності, які інакше призвели б до появи «апельсинової кірки».
+                        .detailes__prop.wow.fadeInLeft(data-wow-delay="0.3s")
+                            .prop
+                                .prop__icon
+                                    +svg-sprite('svgsprite_paint-brush', 'svg-sprite')
+                                .prop__name Потрійна підготовка
+                                .prop__comment Деталі покриваються трьома шарами грунту зі зміною напрямків нанесення. Це дозволяє отримати ідеально рівну поверхню перед фарбуванням.
+                    .detailes__center
+                        .detailes__img.wow.fadeInUp(data-wow-delay="0.1s")
+                            img(src="img/pedestal-2.png", alt="")
+                            .detailes__circles
+                                img(src="img/circles.png", alt="")
+                        .detailes__act.wow.fadeInUp(data-wow-delay="0.4s")
+                            buttonb.button.button_a(data-modal="modal-1") Отримати прайс
+                    .detailes__props.detailes__props_left
+                        .detailes__prop.wow.fadeInRight(data-wow-delay="0.1s")
+                            .prop
+                                .prop__icon
+                                    +svg-sprite('svgsprite_water-drop', 'svg-sprite')
+                                .prop__name Надійний захист
+                                .prop__comment Торці ДСП захищаються кромкою не менше 0,6 мм. Це згладжує усі можливі нерівності. Кромка і деталь ДСП склеюються водостійким клеєм, який зберігає меблі від дії вологи.
+                        .detailes__prop.wow.fadeInRight(data-wow-delay="0.2s")
+                            .prop
+                                .prop__icon
+                                    +svg-sprite('svgsprite_diamond', 'svg-sprite')
+                                .prop__name Преміум-матеріали
+                                .prop__comment Використовуємо ламіноване ДСП «Німфея Альба» від Kronospan та МДФ виробництва ВАТ «Мостовдрев» (Білорусь). На відміну від звичайних меблів, які можна купити в будь-якому магазині.
+                        .detailes__prop.wow.fadeInRight(data-wow-delay="0.3s")
+                            .prop
+                                .prop__icon
+                                    +svg-sprite('svgsprite_award', 'svg-sprite')
+                                .prop__name Красномовна статистика
+                                .prop__comment На 10 000 одиниць нашої продукції трапляється 1 випадок рекламації. І той пов'язаний з механічними пошкодженнями. Рекламацій за якістю покриття (тріщини, здуття, відшарування фарби і т.д.) наша компанія ще не мала.
+            // ==========================
+            // END ДОСКОНАЛІСТЬ В ДЕТАЛЯХ
+            // ==========================
+
+            // ===============================
+            // МЕБЛІ ЯКІ ОТРИМАЛИ ПОПУЛЯРНІСТЬ
+            // ===============================
+            .container
+                .map
+                    .map__container
+                        .map__content
+                            .map__header
+                                .section-header.wow.fadeInUp Меблі, які отримали популярність <span>у європі</span>
+                            .map__comment.wow.fadeInUp(data-wow-delay="0.1s") Якість підтверджено міжнародними сертифікатами ISO з 2015 року
+                    .map__image.wow.fadeInUp(data-wow-delay="0.2s")
+                        img(src="img/map.png", alt="")
+            // ===================================
+            // END МЕБЛІ ЯКІ ОТРИМАЛИ ПОПУЛЯРНІСТЬ
+            // ===================================
+
+            // =======
+            // ПРО НАС
+            // =======
+            .aboutus
+                .container.aboutus__content
+                    .nums
+                        .nums
+                            .nums__item.wow.fadeInLeft(data-wow-delay="0.1s") 
+                                .nums__param з 2007
+                                .nums__about року виготовляємо меблі
+                            .nums__separator.wow.fadeInLeft(data-wow-delay="0.2s") 
+                            .nums__item.wow.fadeInLeft(data-wow-delay="0.3s") 
+                                .nums__param 24
+                                .nums__about місяці гарантії
+                            .nums__separator.wow.fadeInLeft(data-wow-delay="0.4s") 
+                            .nums__item.wow.fadeInLeft(data-wow-delay="0.5s") 
+                                .nums__param 20 000
+                                .nums__about одиниць на місяць - запланована потужність виробництва на 2021 рік
+                            .nums__separator.wow.fadeInLeft(data-wow-delay="0.6s") 
+                            .nums__item.wow.fadeInLeft(data-wow-delay="0.7s") 
+                                .nums__param 500+
+                                .nums__about магазинів-партнерів
+            // ===========
+            // END ПРО НАС
+            // ===========
+            
+            // =================
+            // ДЕ МОЖНА ПРИДБАТИ
+            // =================
+            .container
+                .section-header.wow.fadeInUp  Де можна придбати меблі <span>MIRATER?</span>
+                .purchase
+                    .purchase__item.wow.fadeInUp(data-wow-delay="0.1s") 
+                        img(src="img/loroymerlin.png", alt="")
+                    .purchase__item.wow.fadeInUp(data-wow-delay="0.2s") 
+                        img(src="img/33m.png", alt="")
+                    .purchase__item.wow.fadeInUp(data-wow-delay="0.3s") 
+                        img(src="img/loroymerlin2.png", alt="")
+                    .purchase__item.wow.fadeInUp(data-wow-delay="0.4s") 
+                        img(src="img/loroymerlin.png", alt="")
+            // =====================
+            // END ДЕ МОЖНА ПРИДБАТИ
+            // =====================
+
+            // ===============================
+            // ПРИЄДНУЙТЕСЬ ДО ЧИСЛА ПАРТНЕРІВ
+            // ===============================
+            .container
+                .promo
+                    .promo__man
+                        img(src="img/man.png", alt="")
+                        .promo__circles
+                            img(src="img/circles.png", alt="")
+                    .promo__container
+                        .promo__content
+                            .promo__content
+                                .section-header.wow.fadeInUp.wow.fadeInUp  Приєднуйтесь <br>до числа наших <span>партнерів</span>
+                                .promo__comment.wow.fadeInUp(data-wow-delay="0.1s")  Вигідна пропозиція для будівельних магазинів, дизайнерів інтер’єру та інших підприємців
+                                .promo__act.wow.fadeInUp(data-wow-delay="0.2s") 
+                                    button.button.button_a(data-modal="modal-1") Дізнатися умови
+            // ===================================
+            // END ПРИЄДНУЙТЕСЬ ДО ЧИСЛА ПАРТНЕРІВ
+            // ===================================
+
+
+            // ======
+            // FOOTER
+            // ======
+            footer.footer
+                .container
+                    .footer__container
+                        .footer__content
+                            .footer__header
+                                .section-header Наші <span>контакти</span>
+                            .foot-content
+                                .foot-content__contacts
+                                    .foot-content__address 30000, Хмельницька обл., <br>м. Славута, вул. Привокзальна, буд. 1/2
+                                    .foot-content__call
+                                        a(href="tel:0800331479") 0 800 331 479
+                                        span (Всі дзвінки безкоштовні)
+                                .foot-content__comment
+                                    .foot-content__comtext
+                                        |Комерційний відділ: sales.mirater@gmail.com
+                                        br
+                                        |Відділ персоналу: hr.mirater@gmail.com
+                                        br
+                                        |Бухгалтерія : acc.mirater@gmail.com
+                                        br
+                                        |Директор: ceo.mirater@gmail.com
+                                        br
+                                        |Юрист: lawyer.mirater@gmail.com
+                                    a(href="").foot-content__social
+                                        +svg-sprite('svgsprite_facebook', 'svg-sprite')
+                        .footer__map
+                            .footmap
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20528.564562102692!2d36.25146751052538!3d49.97253510160948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1594582895354!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            // ==========
+            // END FOOTER
+            // ==========
+            script(src="js/main.js")

@@ -1,0 +1,33 @@
+.prop {
+  display: flex;
+  flex-direction: column;
+  @include media-breakpoint-down(md) {
+    align-items: center !important;
+    text-align: center !important;
+  }
+}
+
+.prop__icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: $color-4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .svg-sprite {
+    fill: $color-1;
+    height: 60%;
+    width: 60%;
+  }
+}
+
+.prop__name {
+  font-weight: 700;
+  margin: 16px 0 12px;
+}
+.prop__comment {
+  color: $color-2;
+  line-height: 1.375rem;
+  font-size: 0.875rem;
+}

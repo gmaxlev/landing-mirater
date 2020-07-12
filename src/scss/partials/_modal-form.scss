@@ -1,0 +1,50 @@
+.modal-form {
+  padding: 60px 70px;
+  @include media-breakpoint-down(xs) {
+    padding: 50px 20px 20px;
+  }
+}
+
+.modal-form__header {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.875rem;
+  line-height: 2.75rem;
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  span {
+    color: $color-2;
+  }
+}
+
+.modal-form__subheader {
+  color: $color-2;
+  line-height: 1.5rem;
+  margin: 16px 0 45px;
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+}
+.modal-form__input {
+  margin-bottom: 15px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.modal-form__act {
+  margin-top: 30px;
+  .button {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 278px;
+    width: 100%;
+  }
+  .order-places__button {
+    width: 100%;
+  }
+}

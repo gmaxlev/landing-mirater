@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Black.eot"); /* IE9 */
+  src: url("../fonts/Montserrat-Black.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/Montserrat-Black.woff") format("woff"),
+    /* chrome, firefox */ url("../fonts/Montserrat-Black.ttf")
+      format("truetype"),
+    /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+      url("../fonts/Montserrat-Black.svg#Montserrat Black") format("svg"); /* iOS 4.1- */
+  font-style: normal;
+  font-weight: 900;
+}

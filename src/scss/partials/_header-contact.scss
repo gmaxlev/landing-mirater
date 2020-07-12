@@ -1,0 +1,37 @@
+.header-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 97px;
+  white-space: nowrap;
+  @include media-breakpoint-down(md) {
+    padding-right: 0;
+  }
+}
+
+.header-contact__number {
+  font-weight: 700;
+  color: $color-1;
+}
+
+.header-contact__comment {
+  font-size: 0.8125rem;
+  color: $color-2;
+  margin-top: 4px;
+  @include media-breakpoint-down(xs) {
+    margin-top: 0;
+  }
+  span {
+    &:nth-child(1) {
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
+    }
+    &:nth-child(2) {
+      display: none;
+      @include media-breakpoint-down(xs) {
+        display: inline-block;
+      }
+    }
+  }
+}

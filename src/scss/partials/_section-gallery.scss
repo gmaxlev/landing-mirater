@@ -1,0 +1,11 @@
+.section-gallery {
+  margin-top: 68px;
+  margin-bottom: 70px;
+}
+
+.section-gallery__header {
+  margin-bottom: 43px;
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,94 @@
+%svg-common {
+	background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.svg-svgsprite_award {
+	@extend %svg-common;
+	background-position: 0 99.96095275283092%;
+}
+
+.svg-svgsprite_award-dims {
+	width: 510.6px;
+	height: 510.6px;
+}
+
+.svg-svgsprite_back {
+	@extend %svg-common;
+	background-position: 48.2234940783136% 96.80285870942127%;
+}
+
+.svg-svgsprite_back-dims {
+	width: 477.18px;
+	height: 477.18px;
+}
+
+.svg-svgsprite_brush {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-svgsprite_brush-dims {
+	width: 512px;
+	height: 512px;
+}
+
+.svg-svgsprite_close {
+	@extend %svg-common;
+	background-position: 50% 0;
+}
+
+.svg-svgsprite_close-dims {
+	width: 512px;
+	height: 512px;
+}
+
+.svg-svgsprite_diamond {
+	@extend %svg-common;
+	background-position: 0 50.048875855327466%;
+}
+
+.svg-svgsprite_diamond-dims {
+	width: 512px;
+	height: 512px;
+}
+
+.svg-svgsprite_facebook {
+	@extend %svg-common;
+	background-position: 42.10526315789474% 50.048875855327466%;
+}
+
+.svg-svgsprite_facebook-dims {
+	width: 320px;
+	height: 512px;
+}
+
+.svg-svgsprite_paint-brush {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-svgsprite_paint-brush-dims {
+	width: 512px;
+	height: 512px;
+}
+
+.svg-svgsprite_shines {
+	@extend %svg-common;
+	background-position: 100% 50.048875855327466%;
+}
+
+.svg-svgsprite_shines-dims {
+	width: 512px;
+	height: 512px;
+}
+
+.svg-svgsprite_water-drop {
+	@extend %svg-common;
+	background-position: 85.65556711758585% 88.87345946884221%;
+}
+
+.svg-svgsprite_water-drop-dims {
+	width: 382.8px;
+	height: 382.8px;
+}
+

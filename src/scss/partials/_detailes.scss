@@ -1,0 +1,123 @@
+.detailes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 108px;
+  margin-top: 44px;
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 50px;
+  }
+}
+.detailes__props {
+  width: 36.756%;
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    margin-bottom: 28px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.detailes__prop {
+  margin-bottom: 28px;
+  @include media-breakpoint-down(md) {
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    margin-right: 0px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.detailes__props_right {
+  @include media-breakpoint-down(md) {
+    order: 1;
+  }
+  .prop {
+    align-items: flex-end;
+    text-align: right;
+  }
+  .detailes__prop {
+    &:nth-child(2) {
+      padding-right: 97px;
+      @include media-breakpoint-down(md) {
+        padding: 0;
+      }
+    }
+  }
+}
+.detailes__props_left {
+  @include media-breakpoint-down(md) {
+    order: 2;
+  }
+  .detailes__prop {
+    &:nth-child(2) {
+      padding-left: 97px;
+      @include media-breakpoint-down(md) {
+        padding: 0;
+      }
+    }
+  }
+}
+.detailes__center {
+  width: 63.16;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  @include media-breakpoint-down(md) {
+    order: 3;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    justify-content: space-between;
+  }
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    margin-bottom: 28px;
+  }
+}
+.detailes__img {
+  position: relative;
+  @include media-breakpoint-down(md) {
+    max-width: 335px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+.detailes__circles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: -1;
+
+  img {
+    max-width: none;
+    @include media-breakpoint-down(sm) {
+      max-width: 400px;
+    }
+    @include media-breakpoint-down(xs) {
+      max-width: 300px;
+    }
+  }
+}

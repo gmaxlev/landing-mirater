@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="vendor/animate.min.css" />
+    <script src="vendor/jquery.min.js"></script>
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="vendor/jquery.validate.min.js"></script>
+    <script src="vendor/jquery.mask.min.js"></script>
+    <script src="vendor/wow.min.js"></script><!-- =====================-->
+    <!-- ЗАГРУЗКА SVG СПРАЙТОВ-->
+    <!-- =====================-->
+    <script>
+        $(document).ready(function() {
+            var req = new XMLHttpRequest();
+            req.onload = function(e) {
+                var svg = document.implementation.createHTMLDocument('');
+                svg.body.innerHTML = e.target.response.replace('<svg ', '<svg style="display: none"');
+                document.body.appendChild(svg.body.firstElementChild);
+                svg = null;
+            };
+            req.open('GET', './img/sprite.defs.svg', true);
+            req.responseType = 'text';
+            req.send();
+        });
+    </script><!-- =========================-->
+    <!-- END ЗАГРУЗКА SVG СПРАЙТОВ-->
+    <!-- =========================-->
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- =================-->
+        <!-- МОДАЛЬНАЯ ФОРМА 1-->
+        <!-- =================-->
+        <div class="modal" id="modal-1">
+            <div class="modal__window">
+                <div class="modal__content">
+                    <div class="modal-window">
+                        <div class="modal-form">
+                            <div class="modal-form__header">Заполните форму</div>
+                            <div class="modal-form__subheader">Мы свяжемся с Вами в ближайшее время</div>
+                            <form class="modal-form__form form-modal-1" name="Форма №1">
+                                <div class="modal-form__input">
+                                    <div class="input-text"><input type="text" name="name" placeholder="Ваше имя" /></div>
+                                </div>
+                                <div class="modal-form__input">
+                                    <div class="input-text"><input class="phone-mask" type="text" name="phone" placeholder="Ваш номер телефона" /></div>
+                                </div>
+                                <div class="modal-form__input">
+                                    <div class="input-text"><input type="text" name="email" placeholder="Ваш e-mail" /></div>
+                                </div>
+                                <div class="modal-form__act"><button class="button button_a">Зарегистрироваться</button></div>
+                            </form>
+                            <div class="form-send-error">Ошибка. Не удалось отправить форму.</div>
+                            <div class="form-send-success">Спасибо!<br> Ожидайте звонок.</div>
+                        </div>
+                    </div>
+                    <div class="modal-window__close"><svg class="svg-sprite">
+                            <use xlink:href="#svgsprite_close"></use>
+                        </svg></div>
+                </div>
+            </div>
+        </div><!-- =====================-->
+        <!-- END МОДАЛЬНАЯ ФОРМА 2-->
+        <!-- =====================-->
+        <!-- ======-->
+        <!-- HEADER-->
+        <!-- ======-->
+        <header class="header wow fadeInDown">
+            <div class="container header__content">
+                <div class="header__logo"><img src="img/logo.png" alt="" /></div>
+                <div class="header__contacts">
+                    <div class="header-contact"><a class="header-contact__number" href="">0 800 331 479</a>
+                        <div class="header-contact__comment"><span>Всі дзвінки безкоштовні</span><span>(безкоштовно)</span></div>
+                    </div>
+                </div>
+            </div>
+        </header><!-- ==========-->
+        <!-- END HEADER-->
+        <!-- ==========-->
+        <!-- ===========-->
+        <!-- ПРИВЕТСТВИЕ-->
+        <!-- ===========-->
+        <div class="container">
+            <div class="intro-wrapper">
+                <div class="intro-wrapper__arrow"><img src="img/down-arrow.png" alt="" /></div>
+                <section class="intro">
+                    <div class="intro__intr1"><img src="img/interior-1.png" alt="" /></div>
+                    <div class="intro__intr2"></div>
+                    <div class="intro__intr3"></div>
+                    <div class="intro__intr4"><img src="img/pedestal.png" alt="" /></div>
+                    <div class="intro__intr5"></div>
+                    <div class="intro__content">
+                        <div class="intro__comment wow fadeInUp" data-wow-delay="0.4s">MIRATER</div>
+                        <h1><span class="wow fadeInUp" data-wow-delay="0.5s">Меблі для ванної кімнати</span><span class="wow fadeInUp" data-wow-delay="0.6s">можуть служити роками.</span><span class="accent wow fadeInUp" data-wow-delay="0.7s">Доведено!</span></h1>
+                        <div class="intro__act"><button class="button button_a wow fadeInUp" data-wow-delay="0.8s" data-modal="modal-1">Дивитись каталог</button></div>
+                    </div>
+                </section>
+            </div>
+        </div><!-- ===============-->
+        <!-- END ПРИВЕТСТВИЕ-->
+        <!-- ===============-->
+        <!-- =======-->
+        <!-- ГАЛЕРЕЯ-->
+        <!-- =======-->
+        <section class="section-gallery">
+            <div class="container">
+                <div class="section-gallery__header">
+                    <div class="section-header wow fadeInUp">Коли ванна - <span>перлина оселі</span></div>
+                </div>
+                <div class="section-gallery__content">
+                    <div class="gallery wow fadeInUp">
+                        <div class="gallery__slide gallery__slide_show"><a class="gallery__item gallery__item_sq" href="img/interior-3.png" data-fancybox="gallery" style="background-image: url(img/interior-3.png)"></a><a class="gallery__item gallery__item_rect" href="img/interior-4.png" data-fancybox="gallery" style="background-image: url(img/interior-4.png)"></a>
+                            <div class="gallery__item gallery__item_sev"><a class="gallery__mini" href="img/interior-5.png" data-fancybox="gallery" style="background-image: url(img/interior-5.png)"></a><a class="gallery__mini" href="img/interior-6.png" data-fancybox="gallery" style="background-image: url(img/interior-6.png)"></a></div>
+                        </div>
+                        <div class="gallery__slide"><a class="gallery__item gallery__item_sq" href="img/interior-3.png" data-fancybox="gallery" style="background-image: url(img/interior-3.png)"></a><a class="gallery__item gallery__item_rect" href="img/interior-4.png" data-fancybox="gallery" style="background-image: url(img/interior-4.png)"></a>
+                            <div class="gallery__item gallery__item_sev"><a class="gallery__mini" href="img/interior-5.png" data-fancybox="gallery" style="background-image: url(img/interior-5.png)"></a><a class="gallery__mini" href="img/interior-6.png" data-fancybox="gallery" style="background-image: url(img/interior-6.png)"></a></div>
+                        </div>
+                        <div class="gallery__slide"><a class="gallery__item gallery__item_sq" href="img/interior-3.png" data-fancybox="gallery" style="background-image: url(img/interior-3.png)"></a><a class="gallery__item gallery__item_rect" href="img/interior-4.png" data-fancybox="gallery" style="background-image: url(img/interior-4.png)"></a>
+                            <div class="gallery__item gallery__item_sev"><a class="gallery__mini" href="img/interior-5.png" data-fancybox="gallery" style="background-image: url(img/interior-5.png)"></a><a class="gallery__mini" href="img/interior-6.png" data-fancybox="gallery" style="background-image: url(img/interior-6.png)"></a></div>
+                        </div>
+                        <div class="gallery__slide"><a class="gallery__item gallery__item_sq" href="img/interior-3.png" data-fancybox="gallery" style="background-image: url(img/interior-3.png)"></a><a class="gallery__item gallery__item_rect" href="img/interior-4.png" data-fancybox="gallery" style="background-image: url(img/interior-4.png)"></a>
+                            <div class="gallery__item gallery__item_sev"><a class="gallery__mini" href="img/interior-5.png" data-fancybox="gallery" style="background-image: url(img/interior-5.png)"></a><a class="gallery__mini" href="img/interior-6.png" data-fancybox="gallery" style="background-image: url(img/interior-6.png)"></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-gallery__nav gallery-nav">
+                    <div class="gallery-nav__num"><span id="gallery-active-number"></span><span id="gallery-total-number"></span></div>
+                    <div class="gallery-nav__buttons"><button id="gallery-prev"><svg class="svg-sprite">
+                                <use xlink:href="#svgsprite_back"></use>
+                            </svg></button><button id="gallery-next"><svg class="svg-sprite">
+                                <use xlink:href="#svgsprite_back"></use>
+                            </svg></button></div>
+                </div>
+            </div>
+        </section><!-- ===========-->
+        <!-- END ГАЛЕРЕЯ-->
+        <!-- ===========-->
+        <!-- ===============================-->
+        <!-- ОТРИМАЙТЕ ПОВНИЙ КАТАЛОГ МЕБЛІВ-->
+        <!-- ===============================-->
+        <div class="container">
+            <div class="promo">
+                <div class="promo__book wow flipInX" data-wow-delay="0.5s"><img src="img/book.png" alt="" /></div>
+                <div class="promo__container">
+                    <div class="promo__content">
+                        <div class="promo__content">
+                            <div class="section-header wow fadeInUp">Отримайте <br>повний каталог меблів <span>з цінами</span></div>
+                            <div class="promo__comment wow fadeInUp" data-wow-delay="0.1s">Співвідношення ціна/якість - це про MIRATER</div>
+                            <div class="promo__act wow fadeInUp" data-wow-delay="0.2s"><button class="button button_a" data-modal="modal-1">Отримайте каталог</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- ===================================-->
+        <!-- END ОТРИМАЙТЕ ПОВНИЙ КАТАЛОГ МЕБЛІВ-->
+        <!-- ===================================-->
+        <!-- ======================-->
+        <!-- ДОСКОНАЛІСТЬ В ДЕТАЛЯХ-->
+        <!-- ======================-->
+        <div class="container">
+            <div class="section-header wow fadeInUp">Досконалість в деталях. <span>Підтверджуємо</span></div>
+            <div class="detailes">
+                <div class="detailes__props detailes__props_right">
+                    <div class="detailes__prop wow fadeInLeft" data-wow-delay="0.1s">
+                        <div class="prop">
+                            <div class="prop__icon"><svg class="svg-sprite">
+                                    <use xlink:href="#svgsprite_shines"></use>
+                                </svg></div>
+                            <div class="prop__name">Білосніжний виглядає так</div>
+                            <div class="prop__comment">Всі вироби фарбуються фарбою «VERNILEGNO» (Італія). Вона не має відтінку «жовтизни» та зберігає білосніжність на роки. Сама фарба еластична, що запобігає появі тріщин в покритті.</div>
+                        </div>
+                    </div>
+                    <div class="detailes__prop wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="prop">
+                            <div class="prop__icon"><svg class="svg-sprite">
+                                    <use xlink:href="#svgsprite_brush"></use>
+                                </svg></div>
+                            <div class="prop__name">Ідеальна поверхня</div>
+                            <div class="prop__comment">Фасад та боковини перед ґрунтуванням проходять процес «чорнового шліфування». На цьому етапі усуваються дрібні нерівності, які інакше призвели б до появи «апельсинової кірки».</div>
+                        </div>
+                    </div>
+                    <div class="detailes__prop wow fadeInLeft" data-wow-delay="0.3s">
+                        <div class="prop">
+                            <div class="prop__icon"><svg class="svg-sprite">
+                                    <use xlink:href="#svgsprite_paint-brush"></use>
+                                </svg></div>
+                            <div class="prop__name">Потрійна підготовка</div>
+                            <div class="prop__comment">Деталі покриваються трьома шарами грунту зі зміною напрямків нанесення. Це дозволяє отримати ідеально рівну поверхню перед фарбуванням.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailes__center">
+                    <div class="detailes__img wow fadeInUp" data-wow-delay="0.1s"><img src="img/pedestal-2.png" alt="" />
+                        <div class="detailes__circles"><img src="img/circles.png" alt="" /></div>
+                    </div>
+                    <div class="detailes__act wow fadeInUp" data-wow-delay="0.4s">
+                        <buttonb class="button button_a" data-modal="modal-1">Отримати прайс</buttonb>
+                    </div>
+                </div>
+                <div class="detailes__props detailes__props_left">
+                    <div class="detailes__prop wow fadeInRight" data-wow-delay="0.1s">
+                        <div class="prop">
+                            <div class="prop__icon"><svg class="svg-sprite">
+                                    <use xlink:href="#svgsprite_water-drop"></use>
+                                </svg></div>
+                            <div class="prop__name">Надійний захист</div>
+                            <div class="prop__comment">Торці ДСП захищаються кромкою не менше 0,6 мм. Це згладжує усі можливі нерівності. Кромка і деталь ДСП склеюються водостійким клеєм, який зберігає меблі від дії вологи.</div>
+                        </div>
+                    </div>
+                    <div class="detailes__prop wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="prop">
+                            <div class="prop__icon"><svg class="svg-sprite">
+                                    <use xlink:href="#svgsprite_diamond"></use>
+                                </svg></div>
+                            <div class="prop__name">Преміум-матеріали</div>
+                            <div class="prop__comment">Використовуємо ламіноване ДСП «Німфея Альба» від Kronospan та МДФ виробництва ВАТ «Мостовдрев» (Білорусь). На відміну від звичайних меблів, які можна купити в будь-якому магазині.</div>
+                        </div>
+                    </div>
+                    <div class="detailes__prop wow fadeInRight" data-wow-delay="0.3s">
+                        <div class="prop">
+                            <div class="prop__icon"><svg class="svg-sprite">
+                                    <use xlink:href="#svgsprite_award"></use>
+                                </svg></div>
+                            <div class="prop__name">Красномовна статистика</div>
+                            <div class="prop__comment">На 10 000 одиниць нашої продукції трапляється 1 випадок рекламації. І той пов'язаний з механічними пошкодженнями. Рекламацій за якістю покриття (тріщини, здуття, відшарування фарби і т.д.) наша компанія ще не мала.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- ==========================-->
+        <!-- END ДОСКОНАЛІСТЬ В ДЕТАЛЯХ-->
+        <!-- ==========================-->
+        <!-- ===============================-->
+        <!-- МЕБЛІ ЯКІ ОТРИМАЛИ ПОПУЛЯРНІСТЬ-->
+        <!-- ===============================-->
+        <div class="container">
+            <div class="map">
+                <div class="map__container">
+                    <div class="map__content">
+                        <div class="map__header">
+                            <div class="section-header wow fadeInUp">Меблі, які отримали популярність <span>у європі</span></div>
+                        </div>
+                        <div class="map__comment wow fadeInUp" data-wow-delay="0.1s">Якість підтверджено міжнародними сертифікатами ISO з 2015 року</div>
+                    </div>
+                </div>
+                <div class="map__image wow fadeInUp" data-wow-delay="0.2s"><img src="img/map.png" alt="" /></div>
+            </div>
+        </div><!-- ===================================-->
+        <!-- END МЕБЛІ ЯКІ ОТРИМАЛИ ПОПУЛЯРНІСТЬ-->
+        <!-- ===================================-->
+        <!-- =======-->
+        <!-- ПРО НАС-->
+        <!-- =======-->
+        <div class="aboutus">
+            <div class="container aboutus__content">
+                <div class="nums">
+                    <div class="nums">
+                        <div class="nums__item wow fadeInLeft" data-wow-delay="0.1s">
+                            <div class="nums__param">з 2007</div>
+                            <div class="nums__about">року виготовляємо меблі</div>
+                        </div>
+                        <div class="nums__separator wow fadeInLeft" data-wow-delay="0.2s"> </div>
+                        <div class="nums__item wow fadeInLeft" data-wow-delay="0.3s">
+                            <div class="nums__param">24</div>
+                            <div class="nums__about">місяці гарантії</div>
+                        </div>
+                        <div class="nums__separator wow fadeInLeft" data-wow-delay="0.4s"> </div>
+                        <div class="nums__item wow fadeInLeft" data-wow-delay="0.5s">
+                            <div class="nums__param">20 000</div>
+                            <div class="nums__about">одиниць на місяць - запланована потужність виробництва на 2021 рік</div>
+                        </div>
+                        <div class="nums__separator wow fadeInLeft" data-wow-delay="0.6s"> </div>
+                        <div class="nums__item wow fadeInLeft" data-wow-delay="0.7s">
+                            <div class="nums__param">500+</div>
+                            <div class="nums__about">магазинів-партнерів</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- ===========-->
+        <!-- END ПРО НАС-->
+        <!-- ===========-->
+        <!-- =================-->
+        <!-- ДЕ МОЖНА ПРИДБАТИ-->
+        <!-- =================-->
+        <div class="container">
+            <div class="section-header wow fadeInUp"> Де можна придбати меблі <span>MIRATER?</span></div>
+            <div class="purchase">
+                <div class="purchase__item wow fadeInUp" data-wow-delay="0.1s"> <img src="img/loroymerlin.png" alt="" /></div>
+                <div class="purchase__item wow fadeInUp" data-wow-delay="0.2s"> <img src="img/33m.png" alt="" /></div>
+                <div class="purchase__item wow fadeInUp" data-wow-delay="0.3s"> <img src="img/loroymerlin2.png" alt="" /></div>
+                <div class="purchase__item wow fadeInUp" data-wow-delay="0.4s"> <img src="img/loroymerlin.png" alt="" /></div>
+            </div>
+        </div><!-- =====================-->
+        <!-- END ДЕ МОЖНА ПРИДБАТИ-->
+        <!-- =====================-->
+        <!-- ===============================-->
+        <!-- ПРИЄДНУЙТЕСЬ ДО ЧИСЛА ПАРТНЕРІВ-->
+        <!-- ===============================-->
+        <div class="container">
+            <div class="promo">
+                <div class="promo__man"><img src="img/man.png" alt="" />
+                    <div class="promo__circles"><img src="img/circles.png" alt="" /></div>
+                </div>
+                <div class="promo__container">
+                    <div class="promo__content">
+                        <div class="promo__content">
+                            <div class="section-header wow fadeInUp wow fadeInUp"> Приєднуйтесь <br>до числа наших <span>партнерів</span></div>
+                            <div class="promo__comment wow fadeInUp" data-wow-delay="0.1s"> Вигідна пропозиція для будівельних магазинів, дизайнерів інтер’єру та інших підприємців</div>
+                            <div class="promo__act wow fadeInUp" data-wow-delay="0.2s"> <button class="button button_a" data-modal="modal-1">Дізнатися умови</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- ===================================-->
+        <!-- END ПРИЄДНУЙТЕСЬ ДО ЧИСЛА ПАРТНЕРІВ-->
+        <!-- ===================================-->
+        <!-- ======-->
+        <!-- FOOTER-->
+        <!-- ======-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__container">
+                    <div class="footer__content">
+                        <div class="footer__header">
+                            <div class="section-header">Наші <span>контакти</span></div>
+                        </div>
+                        <div class="foot-content">
+                            <div class="foot-content__contacts">
+                                <div class="foot-content__address">30000, Хмельницька обл., <br>м. Славута, вул. Привокзальна, буд. 1/2</div>
+                                <div class="foot-content__call"><a href="tel:0800331479">0 800 331 479</a><span>(Всі дзвінки безкоштовні)</span></div>
+                            </div>
+                            <div class="foot-content__comment">
+                                <div class="foot-content__comtext">Комерційний відділ: sales.mirater@gmail.com<br />Відділ персоналу: hr.mirater@gmail.com<br />Бухгалтерія : acc.mirater@gmail.com<br />Директор: ceo.mirater@gmail.com<br />Юрист: lawyer.mirater@gmail.com</div><a class="foot-content__social" href=""><svg class="svg-sprite">
+                                        <use xlink:href="#svgsprite_facebook"></use>
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__map">
+                        <div class="footmap"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20528.564562102692!2d36.25146751052538!3d49.97253510160948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1594582895354!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- ==========-->
+        <!-- END FOOTER-->
+        <!-- ==========-->
+        <script src="js/main.js"></script>
+    </div>
+</body>
+
+</html>
